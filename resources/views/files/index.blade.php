@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Downloaded Files</title>
+    <title>Data Duplication Alert System </title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        .highlight {
-            background-color: yellow; /* Highlight color for existing files */
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
 </head>
 <body>
-    <h1>Downloaded Files</h1>
+    <h1>Data Duplication Alert System </h1>
+    <h2>Download File</h2>
 
     <form id="download-url-form">
         @csrf
-        <label for="url">Enter File URL:</label>
+        <label for="url">Enter URL:</label>
         <input type="url" name="url" id="url" required>
-        <button type="submit">Download File</button>
+        <button type="submit">Download</button>
     </form>
 
     <h2>Existing Files</h2>

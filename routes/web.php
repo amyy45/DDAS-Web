@@ -14,13 +14,11 @@ use App\Http\Controllers\DuplicationController;
 |
 */
 
-Route::get('/', function () {
-    return view('files');
-});
+
 
 
 // Route to display downloaded files
-Route::get('/files', [DuplicationController::class, 'index'])->name('files.index');
+Route::get('/', [DuplicationController::class, 'index'])->name('files.index');
 
 // Route to download a file from URL
 Route::post('/files/download-url', [DuplicationController::class, 'downloadFromUrl'])->name('files.downloadFromUrl');
