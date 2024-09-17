@@ -14,6 +14,9 @@ use App\Http\Controllers\DuplicationController;
 |
 */
 
+Route::get('/', function () {
+    return view('files');
+});
 
 
 // Route to display downloaded files
